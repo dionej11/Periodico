@@ -1,0 +1,136 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+@font-face {
+    font-family: "Old English Text";
+    src: url("./old-english-text-mt.ttf");
+}
+body{
+    background-image: radial-gradient(circle, #242525, #333434, #434444, #535455, #646566, #757677, #868788, #97989a, #acaeb0, #c2c4c5, #d8dbdc, #eff2f2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.newletter{
+    width: 45%;
+    background-color: rgb(248, 248, 248);
+    border: 1px solid rgb(202, 200, 200);    
+    padding: 20px;
+    box-shadow: -8px 8px 1px 0 rgb(248, 248, 248);
+}
+
+.newletter__name{
+    display: flex;
+    justify-content: center;
+    font-family: 'Old English Text';
+    font-size: 4em;
+    letter-spacing: 3px;
+}
+.newletter__info{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    font-size: 1.6em;
+    font-family: monospace;
+    letter-spacing: 1px;
+}
+.newletter__info p{
+    margin:0 5px;
+
+}
+.newletter_title h1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 4em;
+    letter-spacing: 5px;
+}
+.newletter_content{
+    display: flex;
+}
+.newletter__left-side{
+    flex-shrink: 2.5;
+}
+.newletter__right-side{
+    flex-shrink: 1;
+}
+.newletter__left-side h2{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8em;   
+    letter-spacing: 2px;
+}
+.newletter__left-side h2 span{
+    margin: 0 15px;
+}
+.newletter__left-side div{
+    display: flex;
+    margin-top: 5px;
+    text-align: justify;
+}
+.newletter__left-side div p:nth-child(1){
+    margin-right: 10px;
+}
+.newletter__right-side{
+    margin-left: 15px;
+}
+.newletter__right-side img{
+    position: unset;
+    width: 100%;
+}
+.me{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(124, 122, 122);
+}
+
+@media (max-width: 1300px){
+    body{
+        height: auto;
+    }
+    .newletter{
+        width: 80%;
+    }
+    .newletter__name{
+        font-size: 2.5em;
+        text-align: center;
+    }
+    .newletter__info{
+        font-size: .8em;
+    }
+    .newletter_title h1{
+        font-size: 1.6em;
+        letter-spacing: 0;
+        text-align: center;
+    }
+    .newletter_content{
+        display: block;
+    }
+    .newletter__left-side div{
+        display: block;
+    }
+    .newletter__left-side div p:nth-child(1){
+        margin-bottom: 10px;
+    }
+    .newletter__left-side h2{
+        letter-spacing: 0;
+        border-bottom: 0;
+        font-size: 1.2em;  
+    }
+    .me{
+        right: 0;
+        bottom: 0;
+        font-size: 12px;
+        transform: rotate(180deg);
+        writing-mode: vertical-rl;
+    }
+}
